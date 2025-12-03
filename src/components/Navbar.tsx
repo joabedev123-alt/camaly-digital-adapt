@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
+import { GradientButton } from "@/components/ui/gradient-button";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -60,16 +60,16 @@ export const Navbar = () => {
         </nav>
 
         <div className="hidden md:flex items-center gap-4">
-          <Button variant="hero" size="lg" asChild>
+          <GradientButton className="h-10 px-6 py-2 min-w-0" asChild>
             <a
               href="https://wa.me/5500000000000"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <MessageCircle className="w-4 h-4" />
+              <MessageCircle className="w-4 h-4 mr-2" />
               Fale Conosco
             </a>
-          </Button>
+          </GradientButton>
         </div>
 
         {/* Mobile Menu Button */}
@@ -99,12 +99,12 @@ export const Navbar = () => {
               {link.label}
             </a>
           ))}
-          <Button variant="hero" className="mt-4" asChild>
+          <GradientButton className="mt-4 w-full" asChild>
             <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="w-4 h-4" />
+              <MessageCircle className="w-4 h-4 mr-2" />
               Fale Conosco
             </a>
-          </Button>
+          </GradientButton>
         </nav>
       </div>
     </header>

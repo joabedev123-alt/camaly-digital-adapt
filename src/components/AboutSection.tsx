@@ -1,26 +1,20 @@
-import { Users, Lightbulb, TrendingUp, Shield } from "lucide-react";
 
-const features = [
-  {
-    icon: Users,
-    title: "Time de Especialistas",
-    description: "3 profissionais apaixonados por tecnologia e resultados trabalhando juntos.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Soluções Personalizadas",
-    description: "Cada projeto é único, assim como o camaleão que se adapta ao ambiente.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Foco em Resultados",
-    description: "Não criamos apenas sites, criamos máquinas de gerar clientes e vendas.",
-  },
-  {
-    icon: Shield,
-    title: "Suporte Completo",
-    description: "Acompanhamento contínuo para garantir o sucesso do seu projeto digital.",
-  },
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import img1 from "@/assets/fotosjonatanigorjoabe/1.png";
+import img2 from "@/assets/fotosjonatanigorjoabe/2.png";
+import img3 from "@/assets/fotosjonatanigorjoabe/3.png";
+
+const teamImages = [
+  { src: img1, alt: "Igor Martins - Especialista Camaly", name: "Igor Martins" },
+  { src: img2, alt: "Joabe Ávila - Especialista Camaly", name: "Joabe Ávila" },
+  { src: img3, alt: "Jonatan Drumond - Especialista Camaly", name: "Jonatan Drumond" },
 ];
 
 export const AboutSection = () => {
@@ -55,13 +49,13 @@ export const AboutSection = () => {
             <div className="flex items-center gap-4">
               <div className="flex -space-x-3">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-camaly-green to-camaly-turquoise flex items-center justify-center text-primary-foreground font-bold border-2 border-background">
-                  L
+                  J
                 </div>
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-camaly-turquoise to-camaly-blue flex items-center justify-center text-primary-foreground font-bold border-2 border-background">
-                  M
+                  I
                 </div>
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-camaly-blue to-camaly-wine flex items-center justify-center text-primary-foreground font-bold border-2 border-background">
-                  R
+                  J
                 </div>
               </div>
               <p className="text-sm text-muted-foreground">
@@ -71,22 +65,37 @@ export const AboutSection = () => {
           </div>
 
           {/* Features Grid */}
-          <div className="grid sm:grid-cols-2 gap-6">
-            {features.map((feature, index) => (
-              <div
-                key={feature.title}
-                className="p-6 rounded-2xl bg-card border border-border/50 card-hover shadow-card group"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-camaly-green/20 to-camaly-turquoise/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="w-6 h-6 text-camaly-green neon-icon" />
-                </div>
-                <h3 className="text-lg font-semibold font-heading mb-2 text-card-foreground">
-                  {feature.title}
-                </h3>
-                <p className="text-sm text-muted-foreground">{feature.description}</p>
-              </div>
-            ))}
+          {/* Carousel Placeholder */}
+          <div className="relative w-full max-w-lg mx-auto">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full"
+            >
+              <CarouselContent>
+                {teamImages.map((image, index) => (
+                  <CarouselItem key={index}>
+                    <div className="p-1">
+                      <div className="relative overflow-hidden rounded-2xl border border-border/50 shadow-card bg-card h-[400px] md:h-[500px] flex items-center justify-center bg-muted/10 group">
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className="w-full h-full object-contain hover:scale-105 transition-transform duration-500"
+                        />
+                        <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          <p className="text-xl font-bold font-heading">{image.name}</p>
+                          <p className="text-sm text-white/80">Especialista</p>
+                        </div>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-4 bg-background/80 backdrop-blur-sm border-border/50 hover:bg-background hover:border-primary" />
+              <CarouselNext className="right-4 bg-background/80 backdrop-blur-sm border-border/50 hover:bg-background hover:border-primary" />
+            </Carousel>
           </div>
         </div>
       </div>

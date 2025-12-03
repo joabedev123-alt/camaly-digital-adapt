@@ -1,17 +1,20 @@
-import { Button } from "@/components/ui/button";
-import { MessageCircle, ArrowRight } from "lucide-react";
-import heroChameleon from "@/assets/hero-chameleon.png";
+import { GradientButton } from "@/components/ui/gradient-button";
+import { MessageCircle } from "lucide-react";
+import heroVideo from "@/assets/videoprincipal/camaly02.mp4";
 
 export const HeroSection = () => {
   return (
     <section id="hero" className="hero-bg min-h-screen flex items-center relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 right-0 w-[600px] h-[600px] opacity-30">
-          <img
-            src={heroChameleon}
-            alt="Camaleão digital Camaly"
-            className="w-full h-full object-contain animate-float"
+        <div className="absolute top-1/4 right-4 lg:right-16 w-[300px] h-[300px] md:w-[600px] md:h-[600px] opacity-30">
+          <video
+            src={heroVideo}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover rounded-3xl animate-float border border-white/10 shadow-2xl"
           />
         </div>
       </div>
@@ -39,22 +42,17 @@ export const HeroSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 animate-[fadeUp_0.8s_ease-out_0.3s_forwards]">
-            <Button variant="hero" size="xl" asChild>
+            <GradientButton asChild>
               <a
                 href="https://wa.me/5500000000000"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <MessageCircle className="w-5 h-5" />
+                <MessageCircle className="w-5 h-5 mr-2" />
                 Falar no WhatsApp
               </a>
-            </Button>
-            <Button variant="heroOutline" size="xl" asChild>
-              <a href="#servicos">
-                Nossos Serviços
-                <ArrowRight className="w-5 h-5" />
-              </a>
-            </Button>
+            </GradientButton>
+
           </div>
 
           {/* Stats */}
@@ -75,12 +73,7 @@ export const HeroSection = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 rounded-full border-2 border-primary-foreground/30 flex items-start justify-center p-2">
-          <div className="w-1 h-3 rounded-full bg-camaly-green" />
-        </div>
-      </div>
+
     </section>
   );
 };

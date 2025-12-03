@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { GradientButton } from "@/components/ui/gradient-button";
 import { MessageCircle, ArrowRight } from "lucide-react";
 
 export const CTASection = () => {
@@ -6,7 +6,7 @@ export const CTASection = () => {
     <section className="py-24 relative overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-camaly-green via-camaly-turquoise to-camaly-blue" />
-      
+
       {/* Overlay pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-10 w-40 h-40 border border-primary-foreground rounded-full" />
@@ -27,8 +27,7 @@ export const CTASection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="xl"
+            <GradientButton
               className="bg-primary-foreground text-camaly-green hover:bg-primary-foreground/90 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               asChild
             >
@@ -37,21 +36,20 @@ export const CTASection = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <MessageCircle className="w-5 h-5" />
+                <MessageCircle className="w-5 h-5 mr-2" />
                 Falar no WhatsApp
               </a>
-            </Button>
-            <Button
-              variant="outline"
-              size="xl"
+            </GradientButton>
+            <GradientButton
+              variant="variant"
               className="border-2 border-primary-foreground/50 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 hover:border-primary-foreground"
               asChild
             >
               <a href="#servicos">
                 Ver Serviços
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5 ml-2" />
               </a>
-            </Button>
+            </GradientButton>
           </div>
 
           <p className="mt-8 text-sm text-primary-foreground/70">
