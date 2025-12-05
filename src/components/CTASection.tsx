@@ -1,5 +1,6 @@
 import { GradientButton } from "@/components/ui/gradient-button";
-import { MessageCircle, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 export const CTASection = () => {
   return (
@@ -36,7 +37,7 @@ export const CTASection = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <MessageCircle className="w-5 h-5 mr-2" />
+                <FaWhatsapp className="w-5 h-5 mr-2" />
                 Falar no WhatsApp
               </a>
             </GradientButton>

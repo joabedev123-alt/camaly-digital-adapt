@@ -1,6 +1,6 @@
 import { GradientButton } from "@/components/ui/gradient-button";
-import { MessageCircle } from "lucide-react";
-import heroVideo from "@/assets/videoprincipal/camaly02.mp4";
+import { FaWhatsapp } from "react-icons/fa";
+import heroVideo from "@/assets/videoprincipal/camaly.mp4";
 
 export const HeroSection = () => {
   return (
@@ -48,7 +48,7 @@ export const HeroSection = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <MessageCircle className="w-5 h-5 mr-2" />
+                <FaWhatsapp className="w-5 h-5 mr-2" />
                 Falar no WhatsApp
               </a>
             </GradientButton>

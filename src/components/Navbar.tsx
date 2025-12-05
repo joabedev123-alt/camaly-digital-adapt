@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { GradientButton } from "@/components/ui/gradient-button";
-import { Menu, X, MessageCircle } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
@@ -35,9 +36,11 @@ export const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <a href="#hero" className="flex items-center gap-2">
-          <span className="gradient-text text-2xl font-bold font-heading tracking-tight">
-            Camaly
-          </span>
+          <img
+            src="/favicon1/PHOTO-2025-12-03-13-22-15.png"
+            alt="Camaly Logo"
+            className="h-20 w-auto object-contain transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_10px_hsl(161,73%,42%)] animate-fade-in"
+          />
         </a>
 
         {/* Desktop Navigation */}
@@ -66,7 +69,7 @@ export const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <MessageCircle className="w-4 h-4 mr-2" />
+              <FaWhatsapp className="w-4 h-4 mr-2" />
               Fale Conosco
             </a>
           </GradientButton>
@@ -101,7 +104,7 @@ export const Navbar = () => {
           ))}
           <GradientButton className="mt-4 w-full" asChild>
             <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="w-4 h-4 mr-2" />
+              <FaWhatsapp className="w-4 h-4 mr-2" />
               Fale Conosco
             </a>
           </GradientButton>

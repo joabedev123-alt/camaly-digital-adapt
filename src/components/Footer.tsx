@@ -9,9 +9,11 @@ export const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <span className="gradient-text text-3xl font-bold font-heading tracking-tight inline-block mb-4">
-              Camaly
-            </span>
+            <img
+              src="/favicon1/PHOTO-2025-12-03-13-22-15.png"
+              alt="Camaly Logo"
+              className="h-16 w-auto object-contain mb-4 transition-all duration-500 hover:scale-105 hover:drop-shadow-[0_0_15px_hsl(161,73%,42%)] animate-fade-in"
+            />
             <p className="text-primary-foreground/70 mb-6 max-w-md">
               Agência digital especializada em transformar negócios através de
               soluções web inovadoras. Assim como o camaleão, nos adaptamos às
