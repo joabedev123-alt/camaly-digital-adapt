@@ -60,15 +60,13 @@ export const ProcessSection = () => {
           {steps.map((step, index) => (
             <div
               key={step.number}
-              className={`relative flex items-start gap-8 mb-12 last:mb-0 ${
-                index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-              }`}
+              className={`relative flex items-start gap-8 mb-12 last:mb-0 ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                }`}
             >
               {/* Content */}
               <div
-                className={`flex-1 pl-20 md:pl-0 ${
-                  index % 2 === 0 ? "md:pr-16 md:text-right" : "md:pl-16 md:text-left"
-                }`}
+                className={`flex-1 pl-20 md:pl-0 ${index % 2 === 0 ? "md:pr-16 md:text-right" : "md:pl-16 md:text-left"
+                  }`}
               >
                 <div className="p-6 rounded-2xl bg-card border border-border/50 shadow-card hover:shadow-card-hover transition-shadow duration-300 group">
                   <span className="inline-block text-sm font-bold text-camaly-green mb-2">
