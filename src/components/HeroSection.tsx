@@ -44,7 +44,7 @@ export const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 animate-[fadeUp_0.8s_ease-out_0.3s_forwards]">
             <GradientButton asChild>
               <a
-                href="https://wa.me/5500000000000"
+                href="https://wa.me/5531973373379"
                 target="_blank"
                 rel="noopener noreferrer"
               >

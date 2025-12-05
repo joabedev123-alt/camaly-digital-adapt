@@ -6,30 +6,50 @@ const steps = [
     icon: Search,
     title: "Diagnóstico Gratuito",
     description: "Analisamos seu negócio, mercado e objetivos para entender exatamente o que você precisa.",
+    textColor: "text-camaly-green",
+    gradient: "from-camaly-green to-camaly-turquoise",
+    borderColor: "border-camaly-green/20",
+    badgeBg: "bg-camaly-green/10",
   },
   {
     number: "02",
     icon: Pencil,
     title: "Criação",
     description: "Desenvolvemos sua solução digital com design exclusivo e tecnologia de ponta.",
+    textColor: "text-camaly-turquoise",
+    gradient: "from-camaly-turquoise to-camaly-blue",
+    borderColor: "border-camaly-turquoise/20",
+    badgeBg: "bg-camaly-turquoise/10",
   },
   {
     number: "03",
     icon: CheckCircle,
     title: "Aprovação",
     description: "Você acompanha cada etapa e aprova o projeto antes do lançamento oficial.",
+    textColor: "text-camaly-blue",
+    gradient: "from-camaly-blue to-camaly-wine",
+    borderColor: "border-camaly-blue/20",
+    badgeBg: "bg-camaly-blue/10",
   },
   {
     number: "04",
     icon: Rocket,
     title: "Lançamento",
     description: "Colocamos seu projeto no ar com todas as otimizações necessárias para performance.",
+    textColor: "text-camaly-yellow",
+    gradient: "from-camaly-yellow to-camaly-green",
+    borderColor: "border-camaly-yellow/20",
+    badgeBg: "bg-camaly-yellow/10",
   },
   {
     number: "05",
     icon: LineChart,
     title: "Gestão e Tráfego",
     description: "Implementamos estratégias de marketing digital para atrair clientes e gerar vendas.",
+    textColor: "text-camaly-wine",
+    gradient: "from-camaly-wine to-camaly-blue",
+    borderColor: "border-camaly-wine/20",
+    badgeBg: "bg-camaly-wine/10",
   },
 ];
 
@@ -68,8 +88,8 @@ export const ProcessSection = () => {
                 className={`flex-1 pl-20 md:pl-0 ${index % 2 === 0 ? "md:pr-16 md:text-right" : "md:pl-16 md:text-left"
                   }`}
               >
-                <div className="p-6 rounded-2xl bg-card border border-border/50 shadow-card hover:shadow-card-hover transition-shadow duration-300 group">
-                  <span className="inline-block text-sm font-bold text-camaly-green mb-2">
+                <div className={`p-6 rounded-2xl border shadow-card hover:shadow-card-hover transition-shadow duration-300 group ${step.borderColor} ${step.badgeBg}`}>
+                  <span className={`inline-block px-3 py-1 rounded-full text-sm font-bold mb-3 ${step.textColor} ${step.badgeBg}`}>
                     Passo {step.number}
                   </span>
                   <h3 className="text-xl font-semibold font-heading mb-3 text-card-foreground group-hover:text-primary transition-colors">
@@ -81,7 +101,7 @@ export const ProcessSection = () => {
 
               {/* Icon */}
               <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 z-10">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-camaly-green to-camaly-turquoise flex items-center justify-center shadow-glow">
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br flex items-center justify-center shadow-glow ${step.gradient}`}>
                   <step.icon className="w-7 h-7 text-primary-foreground" />
                 </div>
               </div>

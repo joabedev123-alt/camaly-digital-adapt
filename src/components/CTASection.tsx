@@ -6,7 +6,7 @@ export const CTASection = () => {
   return (
     <section className="py-24 relative overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-camaly-green via-camaly-turquoise to-camaly-blue" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#001021] to-[#002347]" />
 
       {/* Overlay pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -29,11 +29,11 @@ export const CTASection = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <GradientButton
-              className="bg-primary-foreground text-camaly-green hover:bg-primary-foreground/90 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="bg-primary-foreground text-black hover:bg-primary-foreground/90 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               asChild
             >
               <a
-                href="https://wa.me/5500000000000"
+                href="https://wa.me/5531973373379"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -42,7 +42,7 @@ export const CTASection = () => {
               </a>
             </GradientButton>
             <GradientButton
-              variant="variant"
+              variant="outline"
               className="border-2 border-primary-foreground/50 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 hover:border-primary-foreground"
               asChild
             >
