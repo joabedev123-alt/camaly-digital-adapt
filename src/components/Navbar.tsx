@@ -65,12 +65,12 @@ export const Navbar = () => {
         <div className="hidden md:flex items-center gap-4">
           <GradientButton className="h-10 px-6 py-2 min-w-0" asChild>
             <a
-              href="https://wa.me/5500000000000"
+              href="https://wa.me/5531973373379?text=Olá,%20gostaria%20de%20mais%20informação..."
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaWhatsapp className="w-4 h-4 mr-2" />
-              Fale Conosco
+              WhatsApp
             </a>
           </GradientButton>
         </div>
@@ -103,9 +103,9 @@ export const Navbar = () => {
             </a>
           ))}
           <GradientButton className="mt-4 w-full" asChild>
-            <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/5531973373379?text=Olá,%20gostaria%20de%20mais%20informação..." target="_blank" rel="noopener noreferrer">
               <FaWhatsapp className="w-4 h-4 mr-2" />
-              Fale Conosco
+              WhatsApp
             </a>
           </GradientButton>
         </nav>

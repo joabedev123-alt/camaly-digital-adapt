@@ -1,4 +1,5 @@
 import { GradientButton } from "@/components/ui/gradient-button";
+import { Button } from "@/components/ui/button";
 import { FaWhatsapp } from "react-icons/fa";
 import heroVideo from "@/assets/videoprincipal/camaly.mp4";
 
@@ -42,16 +43,20 @@ export const HeroSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 animate-[fadeUp_0.8s_ease-out_0.3s_forwards]">
-            <GradientButton asChild>
+            <Button
+              size="lg"
+              className="bg-[#25D366] hover:bg-[#128C7E] text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              asChild
+            >
               <a
-                href="https://wa.me/5531973373379"
+                href="https://wa.me/5531973373379?text=Olá,%20gostaria%20de%20mais%20informação..."
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaWhatsapp className="w-5 h-5 mr-2" />
                 Falar no WhatsApp
               </a>
-            </GradientButton>
+            </Button>
 
           </div>
 

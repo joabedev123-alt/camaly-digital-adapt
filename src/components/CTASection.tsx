@@ -33,7 +33,7 @@ export const CTASection = () => {
               asChild
             >
               <a
-                href="https://wa.me/5531973373379"
+                href="https://wa.me/5531973373379?text=Olá,%20gostaria%20de%20mais%20informação..."
                 target="_blank"
                 rel="noopener noreferrer"
               >

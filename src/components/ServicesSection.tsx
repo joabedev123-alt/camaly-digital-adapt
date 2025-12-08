@@ -7,6 +7,7 @@ import {
   TrendingUp,
   Palette,
   MessageSquare,
+  Rocket,
 } from "lucide-react";
 
 const services = [
@@ -35,9 +36,9 @@ const services = [
     color: "from-camaly-wine to-camaly-yellow",
   },
   {
-    icon: Gamepad2,
-    title: "Sites de Games",
-    description: "Portais gamificados e sites interativos para engajar e fidelizar seu público.",
+    icon: Rocket,
+    title: "Landing Page",
+    description: "Páginas de alta conversão focadas em resultados e captura de leads.",
     color: "from-camaly-yellow to-camaly-green",
   },
   {
